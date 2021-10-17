@@ -19,15 +19,19 @@ ergodically samples from a target un-normalized density specified by an energy f
 
 ## Requirements
 
-The main sampler code for ESH dynamics in esh_leap.py uses only PyTorch. Use ``pip install -r requirements.txt`` for requirements for all evaluation code. 
+The main sampler code for ESH dynamics is esh_leap.py and uses only PyTorch. 
+```
+pip install git+https://github.com/gregversteeg/esh_dynamics
+```
+Use ``pip install -r requirements.txt`` for requirements for all evaluation code. 
 
 ## Usage
-TODO: add a simple energy model, show langevin vs ESH
+TODO: add a simple energy model, show Langevin vs ESH
 
 ## Generating figures
 
 See the README in the ``generate_figures`` for scripts to generate each figure in the paper, 
-and to see example usage. 
+and to see more example usage. 
 
 
 ## BibTeX

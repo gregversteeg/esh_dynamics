@@ -5,7 +5,16 @@ import torch as t
 
 
 def esh_leap_step(xs, u, rs, energy, epsilon, grad=None, energy_scale=1., debug=False, constraint=False):
-    """Perform one proper leapfrog step for time-scaled ESH dynamics"""
+    """Perform one proper leapfrog step for time-scaled ESH dynamics.
+    xs - initial position, (batch_size,...)
+    u - unit vector velocity (must be normalized!)
+    rs - keeps track of dynamics for velocity magnitude, but value does not affect x, u. Can set to t.zeros(batch_size)
+    energy - a pytorch function or module that outputs a scalar (per batch item) of input xs
+    grad - You can send in the last grad to avoid recomputing
+    energy_scale - scale the energy function by this value (i.e., a temperature)
+    debug - Look for NaNs and infinities
+    constraint - Bound xs in [-1,1], see "billiards" method.
+    """
     xs = t.autograd.Variable(xs, requires_grad=True)
     if grad is None:
         grad = energy_scale * t.autograd.grad(energy(xs).sum(), [xs])[0]
