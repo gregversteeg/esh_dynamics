@@ -19,15 +19,14 @@ ergodically samples from a target un-normalized density specified by an energy f
 
 ## Requirements
 
-The main sampler code for ESH dynamics is esh_leap.py and uses only PyTorch. 
+The core ESH dynamics sampler code (import esh) uses only PyTorch. 
 ```
 python -m pip install git+https://github.com/gregversteeg/esh_dynamics
 ```
-Use ``pip install -r requirements.txt`` for requirements for all evaluation code. 
+Use ``pip install -r requirements.txt`` to install requirements for all comparison code. 
 
 ## Usage
-TODO: add a simple energy model, show Langevin vs ESH
-
+Here's a small example where we load a pytorch energy function, then sample Langevin versus ESH trajectories. 
 ```python
 import torch as t
 import esh  # ESH Dynamics integrator
