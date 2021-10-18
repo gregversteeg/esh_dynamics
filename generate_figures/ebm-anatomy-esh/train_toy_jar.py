@@ -6,7 +6,7 @@ import torch as t
 import json
 import os
 from nets import ToyNet
-from esh.utils import plot_diagnostics, ToyDataset
+from utils import plot_diagnostics, ToyDataset
 import sys, time
 sys.path.append('..')
 import esh
