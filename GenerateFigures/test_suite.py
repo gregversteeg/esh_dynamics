@@ -4,7 +4,7 @@ import sys
 import pickle
 import torch as t
 from torch.utils.tensorboard import SummaryWriter
-from generate_figures import datasets, utils, samplers
+from GenerateFigures import datasets, utils, samplers
 import matplotlib.pyplot as plt
 import seaborn as sns
 plt.style.use('seaborn-paper')

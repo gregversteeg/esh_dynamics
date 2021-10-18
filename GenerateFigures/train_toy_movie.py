@@ -7,7 +7,7 @@ import numpy as np
 import torch as t
 import torch.nn as nn
 from torch.utils.tensorboard import SummaryWriter
-from generate_figures import datasets
+from GenerateFigures import datasets
 import esh
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation

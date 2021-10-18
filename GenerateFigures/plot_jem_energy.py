@@ -15,7 +15,7 @@ plt.style.use('seaborn-talk')  # also try 'seaborn-paper', 'fivethirtyeight'
 
 # local code
 import esh
-from generate_figures import samplers
+from GenerateFigures import samplers
 
 sys.path.append('JEM')
 import eval_wrn_ebm
