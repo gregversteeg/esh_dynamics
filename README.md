@@ -31,8 +31,8 @@ TODO: add a simple energy model, show Langevin vs ESH
 ```python
 import torch as t
 import esh  # ESH Dynamics integrator
-from esh.GenerateFigures import ToyDataset  # Example energy models
-from esh.GenerateFigures import hmc_integrate  # Sampling comparison methods, like Langevin
+from esh.datasets import ToyDataset  # Example energy models
+from esh.samplers import hmc_integrate  # Sampling comparison methods, like Langevin
 
 # Energy to sample - any pytorch function/module that outputs a scalar per batch item
 energy = ToyDataset(toy_type='gmm').energy  # Gaussian mixture model

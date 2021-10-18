@@ -8,7 +8,7 @@ import torchvision.datasets as datasets
 import json
 import os
 from nets import VanillaNet, NonlocalNet
-from esh.GenerateFigures.utils import download_flowers_data, plot_ims, plot_diagnostics
+from esh.utils import download_flowers_data, plot_ims, plot_diagnostics
 import sys, time
 sys.path.append('..')
 import esh

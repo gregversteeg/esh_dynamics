@@ -1,7 +1,7 @@
 """Test that the Jarzynski sampler is weighting correctly, by estimating log Z for a case with analytic ground truth."""
 import numpy as np
 import torch as t
-from esh.GenerateFigures import datasets
+from esh import datasets
 import esh
 import matplotlib.pyplot as plt
 import seaborn as sns

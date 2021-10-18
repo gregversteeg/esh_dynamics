@@ -1,7 +1,7 @@
 """Produce a plot for the paper, comparing ESH MC steps to Langevin dynamics."""
 import numpy as np
 import torch as t
-from esh.GenerateFigures import datasets, samplers
+from esh import samplers, datasets
 import matplotlib.pyplot as plt
 import seaborn as sns
 plt.style.use('seaborn-paper')
