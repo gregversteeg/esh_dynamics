@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 import torch as t
 from torch.utils.tensorboard import SummaryWriter
-import datasets, utils, samplers
+from esh import datasets, utils, samplers
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
 import seaborn as sns
