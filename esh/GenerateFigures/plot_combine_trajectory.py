@@ -23,7 +23,7 @@ r=1
 n_x=100
 alpha=0.7
 weights=False
-from GenerateFigures import datasets
+from esh.GenerateFigures import datasets
 
 f = datasets.ToyDataset(toy_type='gmm').energy
 

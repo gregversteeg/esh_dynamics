@@ -1,6 +1,6 @@
 import numpy as np
 import torch as t
-from GenerateFigures import datasets
+from esh.GenerateFigures import datasets
 import esh
 import matplotlib.pyplot as plt
 import seaborn as sns
