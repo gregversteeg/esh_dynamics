@@ -38,9 +38,6 @@ n_steps is number of steps in each chain, n_images is number of images to show,
  
 ```markdown
 python test_jarzynski.py {0,1}  # Fig. 8, 
-cd ebm-anatomy-esh
-python train_toy_jar.py {ula, esh} mog  # Fig. 9 (top)
-python train_data_jar.py {ula, esh}  # Fig. 9 (top)
 ```
 
 
@@ -48,16 +45,16 @@ python train_data_jar.py {ula, esh}  # Fig. 9 (top)
 To generate plots on synthetic datasets choose an option of dataset and sampler. 
 ```markdown
 cd ebm_anatomy_esh
-python train_toy.py {esh,ula} {rings,mog}
+python train_toy_jar.py {esh,ula} {rings,mog}
 ```
 
-For CIFAR experiments train as follows. 
+For CIFAR experiments train as follows, choosing the sampler to use. More options are on config_locker folder. 
 ```markdown
 cd ebm_anatomy_esh
 python train_data_pcd.py {esh,ula} cifar10
 ```
-And evaluate with the following.
+And evaluate with the following. Choose the sampler, the initialization, the number of steps and the model checkpoint(s). 
 ```markdown
-python eval.py /path/to/checkpoint
+python eval.py {esh,ula} {uniform,buffer,gaussian,color} num_steps /path/to/checkpoint (or list of checkpoints for ensembling)
 ```
 

@@ -21,7 +21,7 @@ import esh
 
 
 sampler_is_esh = (sys.argv[1][:3] == 'esh')
-mcmc_init = sys.argv[2]  # 'uniform' 'buffer'  'gaussian'
+mcmc_init = sys.argv[2]  # 'uniform' 'buffer'  'gaussian', 'color'
 num_mcmc_steps = int(sys.argv[3])
 paths = sys.argv[4:]
 exp_string = paths[0].split('/')[-3]
