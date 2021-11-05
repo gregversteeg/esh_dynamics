@@ -2,7 +2,7 @@
 Code for the paper:
 
 > Greg Ver Steeg and Aram Galstyan. "Hamiltonian Dynamics with Non-Newtonian Momentum for Rapid Sampling", NeurIPS 2021.
-> [[preprint]](https://github.com/gregversteeg/esh_dynamics/blob/master/assets/draft.pdf) [[bibtex]](#bibtex)
+> [[arxiv]](http://arxiv.org/abs/2111.02434) [[bibtex]](#bibtex)
 
 <p align="center">
 <img align="middle" src="./assets/esh.jpg" width="500" />

@@ -2,7 +2,7 @@
 import numpy as np
 import torch as t
 import torchvision as tv
-import datasets
+from esh import datasets
 
 import pandas as pd
 import matplotlib.pyplot as plt

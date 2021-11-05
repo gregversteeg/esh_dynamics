@@ -292,10 +292,10 @@ def esh_rk_integrate(energy, x0, n_steps, rtol=1e-3, atol=1e-4, t_scale=True,
             return xs, vs, ts
 
 
-def leap_integrate(f, x0, steps, epsilon=0.01):
+def leap_integrate(f, x0, steps, epsilon=0.01, energy_scale=1.):
     """Integrate a single chain using time-scaled ESH dynamics solved via leapfrog,
     starting at x0, using "steps" grad evals."""
-    xs, vs, rs = esh.leap_integrate_chain(f, x0[None, ...], steps, epsilon)
+    xs, vs, rs = esh.leap_integrate_chain(f, x0[None, ...], steps, epsilon, energy_scale=energy_scale)
     xs, vs = xs[:,0], vs[:,0]
     rs = rs - rs.max() + 10  # only defined up to constant anyway, we want to keep it from overflowing exp
     # ts = t.cumsum(t.exp(rs[:, 0]), dim=0)  # Riemann sum
